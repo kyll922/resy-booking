@@ -46,17 +46,14 @@ def print_progress(max_dots=10):
         max_dots (int): The maximum number of dots before resetting (default is 10).
     """
     if not hasattr(print_progress, "count"):
-        print_progress.count = 0  # Initialize the counter on the first call
+        print_progress.count = 0
 
-    # Increment the counter
     print_progress.count += 1
 
-    # If we've reached max_dots, reset the counter and clear the line
     if print_progress.count > max_dots:
         sys.stdout.write('\r' + ' ' * max_dots + '\r')  # Clear the line
         print_progress.count = 1  # Reset to 1
 
-    # Print the current number of dots
     sys.stdout.write('\r' + '.' * print_progress.count)
     sys.stdout.flush()
 
