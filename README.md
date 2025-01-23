@@ -6,8 +6,8 @@ A bot made for non technical users to book dinner reservations at your favorite 
 - [Instructions](#instructions)  
 
 ## Configuration Options
-**int**: not surrounded by quotations in the configs.toml file, example: ```2```  
-**str**: surrounded by quotations ONLY in the configs.toml file, ex: ```"string"```
+>**int**: not surrounded by quotations in the configs.toml file, example: ```2```  
+>**str**: surrounded by quotations ONLY in the configs.toml file, ex: ```"string"```
 - ### :key:api_key
   - This is the public API key for all users. This value should not change from ```"ResyAPI api_key=\"VbWk7s3L4KiK5fzlO7JD3Q5EYolJI7n5\""``` in the configs.toml file.
 
@@ -34,3 +34,7 @@ A bot made for non technical users to book dinner reservations at your favorite 
   - This is the number of seconds between HTTP requests to the resy servers when searching for an open booking. Lower numbers such as .5 or 1 second should be used when you know times are dropping and you start the bot right before. It's not advised to run the bot all day with polling every second or faster.
 
 ## Instructions
+> Please remember to NOT run this several times in small clusters, resy will freeze accounts for 24hrs if multiple logins in short succession are detected!
+1. Download the current release .exe and configs.toml, which can be found in the compressed source code folders.
+2. Right click the configs.toml file and select "Edit in Notepad" to change settings to fit your needs, or leave it as is to enter information manually each time the application is ran. This can be changed anytime by setting a value to ```false```.
+3. Follow the on screen instructions, that's it.
