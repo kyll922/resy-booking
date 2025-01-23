@@ -1,5 +1,12 @@
 # Resy Booking  :clipboard:
-A bot made for non technical users to book dinner reservations at your favorite restaurant. Please keep payment information on your resy account when attempting to book reservations that require a deposit.
+A bot made for non technical users to book dinner reservations at your favorite restaurant. Please keep payment information on your resy account when attempting to book reservations that require a deposit.  
+
+Does this work for restaurants who release times throughout the day randomly?
+> Yes, simply enter your desired time and date and the bot can run in the background.
+
+Can this target a specific time?
+> Kind of, just set the bot up and run it a minute or so before the slots are released. Set the polling time to be lower(faster), such as .5 to 1 second.
+
 
 ## Table of Contents:  
 - [Configuration Options](#configuration-options)
