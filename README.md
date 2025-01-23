@@ -41,5 +41,5 @@ Releases             |  Files
 :-------------------------:|:-------------------------:
 ![image](https://github.com/user-attachments/assets/e74ff27a-c760-4ba7-8922-5623c962879b)  |  ![image](https://github.com/user-attachments/assets/b8df3da5-59ad-4c7d-8452-0c865a17674a)
 
-3. Right click the configs.toml file and select "Edit in Notepad" to change settings to fit your needs, or leave it as is to enter information manually each time the application is ran. This can be changed anytime by setting a value to ```false```.
-4. Follow the on screen instructions, that's it.
+2. Right click the configs.toml file and select "Edit in Notepad" to change settings to fit your needs, or leave it as is to enter information manually each time the application is ran. This can be changed anytime by setting a value to ```false```.
+3. Follow the on screen instructions, that's it.
