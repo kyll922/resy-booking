@@ -3,3 +3,6 @@
 *.iml
 *.pyc
 /main.spec
+logo.ico
+dist/resy_sniper.exe
+/build
