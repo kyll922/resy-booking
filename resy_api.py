@@ -141,7 +141,7 @@ class ResyApi:
                             return config_item['config']['token']
 
                         else:
-                            # For places that require payment or if we need cancellation fee info etc., - placeholder
+                            # if we need cancellation fee info etc., - placeholder
                             # payment_info = config_item['payment']
                             best_config_found = config_item['config']['token']
 
@@ -168,6 +168,13 @@ class ResyApi:
             booking_token = booking_details["book_token"].get("value")
 
             data = {'book_token': booking_token}
+
+            # "struct_payment_method": f'{{"id":{payment_method_id}}}'
+
+            # data = {
+            #     "book_token": booking_token,
+            #     "struct_payment_method": f'{{"id":{payment_id}}}'
+            # }
 
             response = requests.post('https://api.resy.com/3/book', headers=self.headers, data=data)
 

@@ -17,13 +17,18 @@ party_size = 2  # Type: integer | bool
 military_booking_time = "17:00:00"  # Type: str | bool
 
 # Desired date of dining formatted only as YYYY-MM-DD, please keep within quotations.
-date = "2025-01-25"  # Type: str
+date = false  # Type: str
 
 # Values can be found under times on the venue URL landing page. May or may not work.
-# LEAVE THIS AS DINING ROOM EVEN IF YOU WISH TO USE MANUAL INPUT ON EACH RUN. DINING ROOM IS DEFAULT ON MANY PAGES.
+# LEAVE THIS AS "DINING ROOM" EVEN IF YOU WISH TO USE false VALUES ELSEWHERE FOR MANUAL INPUT ON EACH RUN.
+# DINING ROOM IS DEFAULT ON MANY PAGES.
 desired_seating = "Dining Room"  # Type: str
 
 # This is simply the landing page of the restaurant on resy.com. Go to resy, find the restaurant you want to book at
 # and click it. This page will show times, desired seating such as "Bar" etc.,
 # This is the URL you want to copy from the browser address bar and paste here.
-venue_url = "https://resy.com/cities/atlanta-ga/venues/tiger-sun?date=2025-01-20&seats=2"  # Type: str
+venue_url = "https://resy.com/cities/indianapolis-in/venues/delicia?date=2025-01-31&seats=2"  # Type: str
+
+[settings]
+
+polling_interval = 2

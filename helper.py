@@ -18,14 +18,14 @@ def valid_date() -> str:
             print("Invalid date. Please try again using YYYY-MM-DD.")
 
 
-def valid_integer():
+def valid_integer(question, val_err_resp):
     while True:
-        user_input = input("Number of guests: ")
+        user_input = input(f"{question}: ")
         try:
             integer = int(user_input)
             return integer
         except ValueError:
-            print("Please enter an integer for number of guests.")
+            print(f"{val_err_resp}")
 
 
 def default_dining_type():
@@ -85,18 +85,24 @@ def config_parser() -> dict:
         booking_date = data['reservation_details']['date']
         venue_url = data['reservation_details']['venue_url']
         desired_seating = data['reservation_details']['desired_seating']
+        polling_interval = data['settings']['polling_interval']
 
     elif value is False:
         venue_url = input("Please paste the venue page URL from resy.com: ")
         print('\n')
         booking_date = valid_date()
         print('\n')
-        party_size = valid_integer()
+        party_size = valid_integer("Number of guests", "Please use an integer for number of guests.")
         print('\n')
         booking_time = input("Please enter the target booking time in military time (HH:MM:SS).\n"
                              "In general these are in 15 min increments: ")
         print('\n')
         desired_seating = default_dining_type()
+        print('\n')
+        polling_interval = valid_integer("Seconds between HTTP requests?\nThis is how often the PC sends a request to "
+                                         "resy.com, the lower the number the more requests that are sent which can "
+                                         "flag or ban the account. Higher numbers low odds of booking.\nUse caution!",
+                                         "Please use an integer for seconds.")
         print('\n')
 
     print(f"\n-----Details-----\n"
@@ -108,5 +114,5 @@ def config_parser() -> dict:
 
     value_dict = {'party_size': party_size, 'booking_time': booking_time, 'booking_date': booking_date,
                   'venue_url': venue_url, 'desired_seating': desired_seating, 'api_key': data['credentials']['api_key'],
-                  'file_path': file_path}
+                  'file_path': file_path, 'polling_interval': polling_interval}
     return value_dict
