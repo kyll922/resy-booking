@@ -35,6 +35,11 @@ A bot made for non technical users to book dinner reservations at your favorite 
 
 ## Instructions
 > Please remember to NOT run this several times in small clusters, resy will freeze accounts for 24hrs if multiple logins in short succession are detected!
-1. Download the current release .exe and configs.toml, which can be found in the compressed source code folders.
-2. Right click the configs.toml file and select "Edit in Notepad" to change settings to fit your needs, or leave it as is to enter information manually each time the application is ran. This can be changed anytime by setting a value to ```false```.
-3. Follow the on screen instructions, that's it.
+1. Download the current releases ```resy_sniper.exe``` and ```configs.toml```, which can be found in the compressed source code folders.
+
+Releases             |  Files
+:-------------------------:|:-------------------------:
+![image](https://github.com/user-attachments/assets/e74ff27a-c760-4ba7-8922-5623c962879b)  |  ![image](https://github.com/user-attachments/assets/b8df3da5-59ad-4c7d-8452-0c865a17674a)
+
+3. Right click the configs.toml file and select "Edit in Notepad" to change settings to fit your needs, or leave it as is to enter information manually each time the application is ran. This can be changed anytime by setting a value to ```false```.
+4. Follow the on screen instructions, that's it.
