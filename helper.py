@@ -63,7 +63,14 @@ def config_parser() -> dict:
     Handles all the config values, including validation of values. Determines if user input is required.
     :return:
     """
-    file_path = input("Paste 'configs.toml' file path: ")
+    configs_path = input("Paste 'configs.toml' file path: ")
+
+    # By default, win11 "copy as path" makes the path a str
+    if configs_path.startswith('"') and configs_path.endswith('"'):
+        file_path = configs_path[1:-1]
+    else:
+        file_path = configs_path
+
     if not file_path:
         file_path = 'configs.toml'
     print(file_path)
