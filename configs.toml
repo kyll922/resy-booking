@@ -27,7 +27,7 @@ desired_seating = "Dining Room"  # Type: str
 # This is simply the landing page of the restaurant on resy.com. Go to resy, find the restaurant you want to book at
 # and click it. This page will show times, desired seating such as "Bar" etc.,
 # This is the URL you want to copy from the browser address bar and paste here.
-venue_url = "https://resy.com/cities/indianapolis-in/venues/delicia?date=2025-01-31&seats=2"  # Type: str
+venue_url = "https://resy.com/cities/atlanta-ga/venues/tiger-sun?date=2025-01-23&seats=2"  # Type: str
 
 [settings]
 
