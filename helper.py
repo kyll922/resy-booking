@@ -18,7 +18,13 @@ def valid_date() -> str:
             print("Invalid date. Please try again using YYYY-MM-DD.")
 
 
-def valid_integer(question, val_err_resp):
+def valid_integer(question: str, val_err_resp: str) -> int:
+    """
+    Ensures entered value is an int
+    :param question: The input questions to ask, such as "How many users?: "
+    :param val_err_resp: The response if an incorrect value is entered, ie "Please retry".
+    :return:
+    """
     while True:
         user_input = input(f"{question}: ")
         try:
@@ -28,7 +34,11 @@ def valid_integer(question, val_err_resp):
             print(f"{val_err_resp}")
 
 
-def default_dining_type():
+def default_dining_type() -> str:
+    """
+    Sets the default dining type to "Dining Room" if user presses enter.
+    :return: user_input
+    """
     user_input = input("Do you have a desired seating area?\n"
                        "The names can be found on the venues resy page under the times.\n"
                        "Press ENTER to default to 'Dining Room': ")
@@ -41,9 +51,8 @@ def print_progress(max_dots=10):
     """
     Prints dots on the same line progressively up to max_dots,
     then resets and starts again.
-
-    Args:
-        max_dots (int): The maximum number of dots before resetting (default is 10).
+    :param max_dots: The max number of dots to show before restarting
+    :return:
     """
     if not hasattr(print_progress, "count"):
         print_progress.count = 0

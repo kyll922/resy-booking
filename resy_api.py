@@ -8,7 +8,6 @@ class ResyApi:
     def __init__(self, config, auth_token=None):
 
         self.payment_method = None
-
         self.auth_token = auth_token
         self.api_key = config['api_key']
         self.party_size = config['party_size']
@@ -29,10 +28,12 @@ class ResyApi:
         self.__login(config['file_path'])
 
     def __login(self, file_path: str = None):
+        """
+        Logs into resy using the supplied credentials, grabbing the users API auth token.
+        :param file_path: The file path passed for configs.toml
+        :return: auth_token & payment_method
+        """
         print('.....Logging in.....')
-
-        # TODO would prefer to get the authToken cookie from the browser if it's available, but having issues with v130+
-        #  chrome. If this works again we can check for the cookie here then return if found.
 
         if file_path:
             with open(file_path, 'r') as file:
@@ -150,7 +151,12 @@ class ResyApi:
         else:
             return f"Server Response: {response.status_code}"
 
-    def make_reservation(self, config):
+    def make_reservation(self, config) -> bool:
+        """
+        Books the found reservation.
+        :param config: booking_token
+        :return: bool
+        """
 
         params = {
             'config_id': config,
@@ -168,13 +174,6 @@ class ResyApi:
             booking_token = booking_details["book_token"].get("value")
 
             data = {'book_token': booking_token}
-
-            # "struct_payment_method": f'{{"id":{payment_method_id}}}'
-
-            # data = {
-            #     "book_token": booking_token,
-            #     "struct_payment_method": f'{{"id":{payment_id}}}'
-            # }
 
             response = requests.post('https://api.resy.com/3/book', headers=self.headers, data=data)
 
