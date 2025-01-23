@@ -2,7 +2,8 @@
 A bot made for non technical users to book dinner reservations at your favorite restaurant. Please keep payment information on your resy account when attempting to book reservations that require a deposit.
 
 ## Table of Contents:  
-- [Configuration Options](#configuration-options)  
+- [Configuration Options](#configuration-options)
+- [Instructions](#instructions)  
 
 ## Configuration Options
 **int**: not surrounded by quotations in the configs.toml file, example: ```2```  
@@ -25,9 +26,11 @@ A bot made for non technical users to book dinner reservations at your favorite 
     ![image](https://github.com/user-attachments/assets/76525c3f-eceb-4d1a-b1f1-0603804d4563)
 
 - ### :computer:venue_url: str
-  - This is the URL of the resaurant you wish to book at. Go to resy.com, find the restaurant you want and click it. When you are on the landing page copy the URL from the address bar.
+  - This is the URL of the resaurant you wish to book at. Go to resy, find the restaurant you want and click it. When you are on the landing page copy the URL from the address bar.
  
     ![image](https://github.com/user-attachments/assets/4d9be5dc-ab43-4e77-8fac-d966804946ef)
 
 - ### :incoming_envelope:polling_intervals: int
-  - This is the number of seconds between HTTP requests to the resy.com servers when searching for an open booking. Lower numbers such as .5 or 1 second should be used when you know times are dropping and you start the bot right before. It's not advised to run the bot all day with polling every second or faster.
+  - This is the number of seconds between HTTP requests to the resy servers when searching for an open booking. Lower numbers such as .5 or 1 second should be used when you know times are dropping and you start the bot right before. It's not advised to run the bot all day with polling every second or faster.
+
+## Instructions
